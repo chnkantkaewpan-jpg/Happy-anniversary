@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>สุขสันต์วันครบรอบ 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #fda4ba 0%, #d8b5ff 50%, #ff6b9d 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            cursor: pointer;
+            position: relative;
+        }
+
+        .floating-hearts {
+            position: absolute;
+            font-size: 30px;
+            opacity: 0.2;
+            animation: float 5s infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .click-heart {
+            position: absolute;
+            pointer-events: none;
+            animation: heartPop 2s ease-out forwards;
+            font-size: 20px;
+        }
+
+        @keyframes heartPop {
+            0% {
+                transform: scale(0) rotate(0deg);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5) rotate(180deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: scale(0) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 700px;
+            width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: slideIn 1s ease-out;
+            z-index: 10;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: scale(0.5);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .icons {
+            font-size: 40px;
+            margin-bottom: 20px;
+        }
+
+        .sparkle {
+            animation: pulse 1s infinite;
+        }
+
+        .main-heart {
+            animation: bounce 1s infinite;
+            color: #e74c3c;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+
+        h1 {
+            font-size: 48px;
+            background: linear-gradient(135deg, #e91e63 0%, #9c27b0 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+
+        .date {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            color: #666;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .message-box {
+            background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 100%);
+            border-radius: 20px;
+            padding: 30px;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .message-box p {
+            color: #555;
+            font-size: 18px;
+            text-align: center;
+        }
+
+        .emoji-row {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 35px;
+            margin-bottom: 20px;
+        }
+
+        .emoji-row span {
+            animation: pulse 1.5s infinite;
+        }
+
+        .emoji-row span:nth-child(2n) {
+            animation: bounce 1.5s infinite;
+        }
+
+        .note {
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .signature {
+            text-align: center;
+            color: #666;
+            font-style: italic;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 30px 20px;
+            }
+            h1 {
+                font-size: 36px;
+            }
+            .message-box p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background floating hearts -->
+    <div id="background-hearts"></div>
+
+    <!-- Main container -->
+    <div class="container">
+        <div class="header">
+            <div class="icons">
+                <span class="sparkle">✨</span>
+                <span class="main-heart">❤️</span>
+                <span class="sparkle">✨</span>
+            </div>
+            <h1>สุขสันต์วันครบรอบ</h1>
+            <div class="date">
+                <span>📅12/11/2568</span>
+                <span>วันที่พิเศษสำหรับเค้า</span>
+            </div>
+        </div>
+
+        <div class="message-box">
+            <p>
+                สุขสันต์วันครบรอบ 1 เดือนน่ะค้าบบี๋ ❤️
+
+                ทุกวันที่ได้คุยกับบี๋<br>
+                คือวันที่มีความสุขที่สุดในชีวิตของเค้าเลยน้า 💕<br>
+                <br>
+                ขอบคุณที่เข้ามาทำให้ชีวิตของเค้าสดใส<br>
+                เต็มไปด้วยรอยยิ้มและความอบอุ่นน้า<br>
+                ถึงจะไม่เข้าใจกันบ้างทะเลาะกันบ้างแต่เค้าไม่คิดจะไปไหนเลยน่ะค้าบ<br>
+                และอยากขอโทษในหลายๆเรื่องที่ผ่านมาน่ะค้าบ💖<br>
+                <br>
+                รักบี๋มากที่สุดเลยน้า ❤️<br>
+                และจะรักบี๋ตลอดไป 🌹
+            </p>
+        </div>
+
+        <div class="emoji-row">
+            <span>💗</span>
+            <span>💝</span>
+            <span>💕</span>
+            <span>💖</span>
+            <span>💗</span>
+        </div>
+
+        <p class="note">
+            คลิกที่หน้าจอเพื่อส่งหัวใจให้คนพิเศษ ✨
+        </p>
+
+        <div class="signature">
+            <p>จากคนที่รักบี่มากที่สุดน่ะค้าบ 💌</p>
+        </div>
+    </div>
+
+    <script>
+        // Create background floating hearts
+        const bgHeartsContainer = document.getElementById('background-hearts');
+        const heartEmojis = ['💖', '💕', '💗', '💝', '❤️'];
+        
+        for (let i = 0; i < 20; i++) {
+            const heart = document.createElement('div');
+            heart.className = 'floating-hearts';
+            heart.textContent = heartEmojis[Math.floor(Math.random() * heartEmojis.length)];
+            heart.style.left = Math.random() * 100 + '%';
+            heart.style.top = Math.random() * 100 + '%';
+            heart.style.animationDelay = Math.random() * 3 + 's';
+            heart.style.animationDuration = (3 + Math.random() * 2) + 's';
+            bgHeartsContainer.appendChild(heart);
+        }
+
+        // Click to create hearts
+        document.body.addEventListener('click', function(e) {
+            const heart = document.createElement('div');
+            heart.className = 'click-heart';
+            heart.textContent = '❤️';
+            heart.style.left = e.clientX + 'px';
+            heart.style.top = e.clientY + 'px';
+            heart.style.fontSize = (Math.random() * 20 + 15) + 'px';
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => {
+                heart.remove();
+            }, 2000);
+        });
+    </script>
+</body>
+</html>
